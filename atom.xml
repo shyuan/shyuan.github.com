@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[袁氏開發物語]]></title>
+  <link href="http://shyuan.github.com/atom.xml" rel="self"/>
+  <link href="http://shyuan.github.com/"/>
+  <updated>2012-07-11T02:07:26+08:00</updated>
+  <id>http://shyuan.github.com/</id>
+  <author>
+    <name><![CDATA[Sheng-Ho Chris Yuan, 袁昇禾]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[讓 sudo 不用輸入密碼]]></title>
+    <link href="http://shyuan.github.com/blog/2012/07/10/no-need-to-enter-password-sudo/"/>
+    <updated>2012-07-10T15:36:00+08:00</updated>
+    <id>http://shyuan.github.com/blog/2012/07/10/no-need-to-enter-password-sudo</id>
+    <content type="html"><![CDATA[<p>對於 sudo 常常問密碼感到麻煩嗎？改一下 /etc/sudoers 設定檔吧！</p>
+
+<figure class='code'><figcaption><span>把你的帳號加到 /etc/group 中</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo:x:27:myAccount</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>把 NOPASSWD: 加到 /etc/sudoers 的 sudo group 段落</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># Allow members of group sudo to execute any command
+</span><span class='line'>%sudo   ALL=(ALL:ALL) NOPASSWD: ALL</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[在 Ubuntu Linux 中安裝 redis-server]]></title>
+    <link href="http://shyuan.github.com/blog/2012/07/10/install-redis-in-ubuntu-linux/"/>
+    <updated>2012-07-10T12:38:00+08:00</updated>
+    <id>http://shyuan.github.com/blog/2012/07/10/install-redis-in-ubuntu-linux</id>
+    <content type="html"><![CDATA[<p>由於在 Ubuntu 中預設套件庫中的 redis-server 版本過於老舊，所以我們透過非官方的 PPA 套件庫來安裝。</p>
+
+<figure class='code'><figcaption><span>從 Chris Lea 的 PPA 安裝 redis-server</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>sudo add-apt-repository ppa:chris-lea/redis-server
+</span><span class='line'><span class="nv">$ </span>sudo apt-get update
+</span><span class='line'><span class="nv">$ </span>sudo apt-get install redis-server
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>redis 有提供 CLI 指令進行操作，我們可以利用該指令實驗是否安裝成功</p>
+
+<figure class='code'><figcaption><span>測試 redis-server 是否安裝成功</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>redis-cli
+</span><span class='line'>redis 127.0.0.1:6379&gt; INFO
+</span><span class='line'>redis_version:2.4.15
+</span><span class='line'>...
+</span><span class='line'>...
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+</feed>
