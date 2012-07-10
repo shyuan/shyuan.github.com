@@ -4,7 +4,7 @@
   <title><![CDATA[袁氏開發物語]]></title>
   <link href="http://shyuan.github.com/atom.xml" rel="self"/>
   <link href="http://shyuan.github.com/"/>
-  <updated>2012-07-10T14:01:13+08:00</updated>
+  <updated>2012-07-10T15:50:06+08:00</updated>
   <id>http://shyuan.github.com/</id>
   <author>
     <name><![CDATA[Sheng-Ho Chris Yuan, 袁昇禾]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[讓 sudo 不用輸入密碼]]></title>
+    <link href="http://shyuan.github.com/blog/2012/07/10/no-need-to-enter-password-sudo/"/>
+    <updated>2012-07-10T15:36:00+08:00</updated>
+    <id>http://shyuan.github.com/blog/2012/07/10/no-need-to-enter-password-sudo</id>
+    <content type="html"><![CDATA[<p>對於 sudo 常常問密碼感到麻煩嗎？改一下 /etc/sudoers 設定檔吧！</p>
+
+<figure class='code'><figcaption><span>把你的帳號加到 /etc/group 中</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo:x:27:myAccount</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>把 NOPASSWD: 加到 /etc/sudoers 的 sudo group 段落</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># Allow members of group sudo to execute any command
+</span><span class='line'>%sudo   ALL=(ALL:ALL) NOPASSWD: ALL</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[在 Ubuntu Linux 中安裝 redis-server]]></title>
