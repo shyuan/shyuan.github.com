@@ -1,11 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
+        <loc>http://shyuan.github.com/blog/2012/07/10/install-redis-in-ubuntu-linux/</loc>
+        <lastmod>2012-07-10T13:06:28+08:00</lastmod>
+    </url>
+    <url>
         <loc>http://shyuan.github.com/</loc>
-        <lastmod>2012-07-10T11:51:16+08:00</lastmod>
+        <lastmod>2012-07-10T13:06:28+08:00</lastmod>
     </url>
     <url>
         <loc>http://shyuan.github.com/blog/archives/</loc>
-        <lastmod>2012-07-10T11:51:16+08:00</lastmod>
+        <lastmod>2012-07-10T13:06:28+08:00</lastmod>
     </url>
 </urlset>

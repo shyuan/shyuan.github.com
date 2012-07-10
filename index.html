@@ -9,7 +9,7 @@
   <meta name="author" content="Sheng-Ho Chris Yuan">
 
   
-  <meta name="description" content="Blog Archives Recent Posts GitHub Repos Status updating&#8230; @shyuan on GitHub $.domReady(function(){ if (!window.jXHR){ var jxhr = document. &hellip;">
+  <meta name="description" content="Since the version of redis-server in Ubuntu is too old, so we need to install it from a PPA repository. Install redis-server from Chris Lea&#8217;s &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +65,61 @@
       <div class="blog-index">
   
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/10/install-redis-in-ubuntu-linux/">Install Redis in Ubuntu Linux</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-10T12:38:00+08:00" pubdate data-updated="true">Jul 10<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Since the version of redis-server in Ubuntu is too old, so we need to install it from a PPA repository.</p>
+
+<figure class='code'><figcaption><span>Install redis-server from Chris Lea&#8217;s PPA</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>sudo add-apt-repository ppa:chris-lea/redis-server
+</span><span class='line'><span class="nv">$ </span>sudo apt-get update
+</span><span class='line'><span class="nv">$ </span>sudo apt-get install redis-server
+</span><span class='line'><span class="nv">$ </span>redis-cli
+</span><span class='line'>redis 127.0.0.1:6379&gt; INFO
+</span><span class='line'>redis_version:2.4.15
+</span><span class='line'>...
+</span><span class='line'>...
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
   <div class="pagination">
     
     <a href="/blog/archives">Blog Archives</a>
@@ -76,6 +131,10 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/07/10/install-redis-in-ubuntu-linux/">Install redis in Ubuntu Linux</a>
+      </li>
     
   </ul>
 </section>
