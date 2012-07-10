@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>袁氏開發物語</title>
+	<title>在 Ubuntu Linux 中安裝 zsh 及 oh-my-zsh - 袁氏開發物語</title>
 	<meta name="author" content="Sheng-Ho Chris Yuan, 袁昇禾">
 
 	
@@ -93,13 +93,9 @@ $ git clone https://github.com/robbyrussell/ &hellip;">
 	})(jQuery);
 </script>
 
-	<div id="content" class="inner">
-
-
-    <article class="post">
-	<h1 class="title"><a href="/blog/2012/07/10/install-zsh-and-oh-my-zsh-in-ubuntu-linux/">在 Ubuntu Linux 中安裝 Zsh 及 Oh-my-zsh</a></h1>
-	<div class="entry-content">
-		<p>直接用 apt-get 安裝 zsh 套件</p>
+	<div id="content" class="inner"><article class="post">
+	<h1 class="title">在 Ubuntu Linux 中安裝 Zsh 及 Oh-my-zsh</h1>
+	<div class="entry-content"><p>直接用 apt-get 安裝 zsh 套件</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -153,10 +149,7 @@ $ git clone https://github.com/robbyrussell/ &hellip;">
 
 
 
-
-		
-		
-	</div>
+</div>
 
 
 <div class="meta">
@@ -182,118 +175,23 @@ $ git clone https://github.com/robbyrussell/ &hellip;">
 </div>
 	
 </div></article>
-
-
-    <article class="post">
-	<h1 class="title"><a href="/blog/2012/07/10/no-need-to-enter-password-sudo/">讓 Sudo 不用輸入密碼</a></h1>
-	<div class="entry-content">
-		<p>對於 sudo 常常問密碼感到麻煩嗎？改一下 /etc/sudoers 設定檔吧！</p>
-
-<figure class='code'><figcaption><span>把你的帳號加到 /etc/group 中</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo:x:27:myAccount</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span>把 NOPASSWD: 加到 /etc/sudoers 的 sudo group 段落</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># Allow members of group sudo to execute any command
-</span><span class='line'>%sudo   ALL=(ALL:ALL) NOPASSWD: ALL</span></code></pre></td></tr></table></div></figure>
-
-
-		
-		
+<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+	
+	<a class="addthis_counter addthis_pill_style"></a>
 	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-10T15:36:00+08:00" pubdate data-updated="true">Jul 10<span>th</span>, 2012</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/linux/'>linux</a>
-
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
 
 </div>
-	
-</div></article>
-
-
-    <article class="post">
-	<h1 class="title"><a href="/blog/2012/07/10/install-redis-in-ubuntu-linux/">在 Ubuntu Linux 中安裝 Redis-server</a></h1>
-	<div class="entry-content">
-		<p>由於在 Ubuntu 中預設套件庫中的 redis-server 版本過於老舊，所以我們透過非官方的 PPA 套件庫來安裝。</p>
-
-<figure class='code'><figcaption><span>從 Chris Lea 的 PPA 安裝 redis-server</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>sudo add-apt-repository ppa:chris-lea/redis-server
-</span><span class='line'><span class="nv">$ </span>sudo apt-get update
-</span><span class='line'><span class="nv">$ </span>sudo apt-get install redis-server
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>redis 有提供 CLI 指令進行操作，我們可以利用該指令實驗是否安裝成功</p>
-
-<figure class='code'><figcaption><span>測試 redis-server 是否安裝成功</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>redis-cli
-</span><span class='line'>redis 127.0.0.1:6379&gt; INFO
-</span><span class='line'>redis_version:2.4.15
-</span><span class='line'>...
-</span><span class='line'>...
-</span></code></pre></td></tr></table></div></figure>
-
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-10T12:38:00+08:00" pubdate data-updated="true">Jul 10<span>th</span>, 2012</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/redis/'>redis</a>, <a class='category' href='/blog/categories/service/'>service</a>
-
-
-</div>
-	
-</div></article>
-
-<nav id="pagenavi">
-    
-    
-    <div class="center"><a href="/blog/archives">Blog Archives</a></div>
-</nav></div>
 	<footer id="footer" class="inner">Copyright &copy; 2012
 
     Sheng-Ho Chris Yuan, 袁昇禾
