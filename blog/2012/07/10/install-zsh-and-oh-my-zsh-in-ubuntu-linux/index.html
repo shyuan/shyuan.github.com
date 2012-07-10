@@ -5,12 +5,17 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>袁氏開發物語</title>
+  <title>在 Ubuntu Linux 中安裝 zsh 及 oh-my-zsh - 袁氏開發物語</title>
   <meta name="author" content="Sheng-Ho Chris Yuan, 袁昇禾">
 
   
-  <meta name="description" content="
-">
+  <meta name="description" content="直接用 apt-get 安裝 zsh 套件 1
+2
+3
+$ apt-get install zsh
+$ zsh --verison
+zsh 4.3.17 從 GitHub 下載 oh-my-zsh 套件 1
+$ git clone https://github.com/robbyrussell/ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://shyuan.github.com/">
+  <link rel="canonical" href="http://shyuan.github.com/blog/2012/07/10/install-zsh-and-oh-my-zsh-in-ubuntu-linux/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -63,51 +68,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/07/10/install-gitlab-git-repository-management-system/">Install GITLAB Git Repository Management System</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-10T21:18:00+08:00" pubdate data-updated="true">Jul 10<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/07/10/install-zsh-and-oh-my-zsh-in-ubuntu-linux/">在 Ubuntu Linux 中安裝 Zsh 及 Oh-my-zsh</a></h1>
+      <h1 class="entry-title">在 Ubuntu Linux 中安裝 Zsh 及 Oh-my-zsh</h1>
     
     
       <p class="meta">
@@ -130,7 +96,7 @@
   </header>
 
 
-  <div class="entry-content"><p>直接用 apt-get 安裝 zsh 套件</p>
+<div class="entry-content"><p>直接用 apt-get 安裝 zsh 套件</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -185,70 +151,16 @@
 
 
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/07/10/no-need-to-enter-password-sudo/">讓 Sudo 不用輸入密碼</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
   
 
+<span class="byline author vcard">Posted by <span class="fn">Sheng-Ho Chris Yuan, 袁昇禾</span></span>
 
-<time datetime="2012-07-10T15:36:00+08:00" pubdate data-updated="true">Jul 10<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>對於 sudo 常常問密碼感到麻煩嗎？改一下 /etc/sudoers 設定檔吧！</p>
-
-<figure class='code'><figcaption><span>把你的帳號加到 /etc/group 中</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo:x:27:myAccount</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span>把 NOPASSWD: 加到 /etc/sudoers 的 sudo group 段落</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># Allow members of group sudo to execute any command
-</span><span class='line'>%sudo   ALL=(ALL:ALL) NOPASSWD: ALL</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/07/10/install-redis-in-ubuntu-linux/">在 Ubuntu Linux 中安裝 Redis-server</a></h1>
-    
-    
-      <p class="meta">
-        
 
 
 
@@ -260,51 +172,44 @@
   
 
 
-<time datetime="2012-07-10T12:38:00+08:00" pubdate data-updated="true">Jul 10<span>th</span>, 2012</time>
-        
-      </p>
+<time datetime="2012-07-10T21:17:00+08:00" pubdate data-updated="true">Jul 10<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/linux/'>linux</a>, <a class='category' href='/blog/categories/zsh/'>zsh</a>
+  
+</span>
+
+
+    </p>
     
-  </header>
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://shyuan.github.com/blog/2012/07/10/install-zsh-and-oh-my-zsh-in-ubuntu-linux/" data-via="honglong0420" data-counturl="http://shyuan.github.com/blog/2012/07/10/install-zsh-and-oh-my-zsh-in-ubuntu-linux/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
 
-
-  <div class="entry-content"><p>由於在 Ubuntu 中預設套件庫中的 redis-server 版本過於老舊，所以我們透過非官方的 PPA 套件庫來安裝。</p>
-
-<figure class='code'><figcaption><span>從 Chris Lea 的 PPA 安裝 redis-server</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>sudo add-apt-repository ppa:chris-lea/redis-server
-</span><span class='line'><span class="nv">$ </span>sudo apt-get update
-</span><span class='line'><span class="nv">$ </span>sudo apt-get install redis-server
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>redis 有提供 CLI 指令進行操作，我們可以利用該指令實驗是否安裝成功</p>
-
-<figure class='code'><figcaption><span>測試 redis-server 是否安裝成功</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>redis-cli
-</span><span class='line'>redis 127.0.0.1:6379&gt; INFO
-</span><span class='line'>redis_version:2.4.15
-</span><span class='line'>...
-</span><span class='line'>...
-</span></code></pre></td></tr></table></div></figure>
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/07/10/no-need-to-enter-password-sudo/" title="Previous Post: 讓 sudo 不用輸入密碼">&laquo; 讓 sudo 不用輸入密碼</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/07/10/install-gitlab-git-repository-management-system/" title="Next Post: Install GITLAB git repository management system">Install GITLAB git repository management system &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
 
 </div>
-  
-  
 
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
 <aside class="sidebar">
   
     <section>
@@ -333,7 +238,7 @@
 <section>
   <h1>GitHub Repos</h1>
   <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   
   <a href="https://github.com/shyuan">@shyuan</a> on GitHub
@@ -363,7 +268,7 @@
 <section>
   <h1>Latest Tweets</h1>
   <ul id="tweets">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   <script type="text/javascript">
     $.domReady(function(){
@@ -391,6 +296,7 @@
 
   
 </aside>
+
 
     </div>
   </div>

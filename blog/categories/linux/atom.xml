@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: linux | 袁氏開發物語]]></title>
+  <link href="http://shyuan.github.com/blog/categories/linux/atom.xml" rel="self"/>
+  <link href="http://shyuan.github.com/"/>
+  <updated>2012-07-11T02:55:23+08:00</updated>
+  <id>http://shyuan.github.com/</id>
+  <author>
+    <name><![CDATA[Sheng-Ho Chris Yuan, 袁昇禾]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[在 Ubuntu Linux 中安裝 zsh 及 oh-my-zsh]]></title>
+    <link href="http://shyuan.github.com/blog/2012/07/10/install-zsh-and-oh-my-zsh-in-ubuntu-linux/"/>
+    <updated>2012-07-10T21:17:00+08:00</updated>
+    <id>http://shyuan.github.com/blog/2012/07/10/install-zsh-and-oh-my-zsh-in-ubuntu-linux</id>
+    <content type="html"><![CDATA[<p>直接用 apt-get 安裝 zsh 套件
+<code>sh
+$ apt-get install zsh
+$ zsh --verison
+zsh 4.3.17
+</code></p>
+
+<p>從 GitHub 下載 oh-my-zsh 套件
+<code>sh
+$ git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+</code></p>
+
+<p>如果本來沒有安裝 zsh 可以直接使用 oh-my-zsh 的範例 zshrc
+<code>sh
+$ cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+</code></p>
+
+<p>看看有什麼 Theme 可以用
+<code>sh
+$ ls ~/.oh-my-zsh/themes
+</code></p>
+
+<p>編輯 ~/.zshrc 更換 zsh 的 theme 我自己喜歡用 candy
+<code>sh
+ZSH_THEME="candy"
+</code></p>
+
+<p>看看有什麼 Plugin 可以用
+<code>sh
+$ ls ~/.oh-my-zsh/plugins
+</code></p>
+
+<p>編輯 ~/.zshrc 啟用 Plugin
+<code>sh
+plugins=(git git-flow debian grails rvm history-substring-search github gradle svn node npm zsh-syntax-highlighting sublime)
+</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[讓 sudo 不用輸入密碼]]></title>
+    <link href="http://shyuan.github.com/blog/2012/07/10/no-need-to-enter-password-sudo/"/>
+    <updated>2012-07-10T15:36:00+08:00</updated>
+    <id>http://shyuan.github.com/blog/2012/07/10/no-need-to-enter-password-sudo</id>
+    <content type="html"><![CDATA[<p>對於 sudo 常常問密碼感到麻煩嗎？改一下 /etc/sudoers 設定檔吧！</p>
+
+<p><code>plain 把你的帳號加到 /etc/group 中
+sudo:x:27:myAccount
+</code></p>
+
+<p>``` plain 把 NOPASSWD: 加到 /etc/sudoers 的 sudo group 段落</p>
+
+<h1>Allow members of group sudo to execute any command</h1>
+
+<p>%sudo   ALL=(ALL:ALL) NOPASSWD: ALL
+```</p>
+]]></content>
+  </entry>
+  
+</feed>
