@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
+    <url>
+        <loc>http://shyuan.github.com/blog/2012/07/10/install-redis-in-ubuntu-linux/</loc>
+        <lastmod>2012-07-11T02:55:13+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://shyuan.github.com/blog/2012/07/10/no-need-to-enter-password-sudo/</loc>
+        <lastmod>2012-07-11T02:55:13+08:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://shyuan.github.com/blog/2012/07/10/install-zsh-and-oh-my-zsh-in-ubuntu-linux/
+        </loc>
+        <lastmod>2012-07-11T02:55:13+08:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://shyuan.github.com/blog/2012/07/10/install-gitlab-git-repository-management-system/
+        </loc>
+        <lastmod>2012-07-11T02:55:13+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://shyuan.github.com/</loc>
+        <lastmod>2012-07-11T02:55:13+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://shyuan.github.com/blog/archives/</loc>
+        <lastmod>2012-07-11T02:55:13+08:00</lastmod>
+    </url>
+</urlset>
