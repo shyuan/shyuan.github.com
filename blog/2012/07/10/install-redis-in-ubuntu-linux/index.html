@@ -5,11 +5,14 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Install redis in Ubuntu Linux - 袁氏開發物語</title>
+  <title>在 Ubuntu Linux 中安裝 redis-server - 袁氏開發物語</title>
   <meta name="author" content="Sheng-Ho Chris Yuan, 袁昇禾">
 
   
-  <meta name="description" content="Since the version of redis-server in Ubuntu is too old, so we need to install it from a PPA repository. Install redis-server from Chris Lea&#8217;s &hellip;">
+  <meta name="description" content="由於在 Ubuntu 中預設套件庫中的 redis-server 版本過於老舊，所以我們透過非官方的 PPA 套件庫來安裝。 從 Chris Lea 的 PPA 安裝 redis-server1
+2
+3
+$ sudo add-apt-repository ppa:chris-lea/redis- &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -67,7 +70,7 @@
   
   <header>
     
-      <h1 class="entry-title">Install Redis in Ubuntu Linux</h1>
+      <h1 class="entry-title">在 Ubuntu Linux 中安裝 Redis-server</h1>
     
     
       <p class="meta">
@@ -90,20 +93,25 @@
   </header>
 
 
-<div class="entry-content"><p>Since the version of redis-server in Ubuntu is too old, so we need to install it from a PPA repository.</p>
+<div class="entry-content"><p>由於在 Ubuntu 中預設套件庫中的 redis-server 版本過於老舊，所以我們透過非官方的 PPA 套件庫來安裝。</p>
 
-<figure class='code'><figcaption><span>Install redis-server from Chris Lea&#8217;s PPA</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span>從 Chris Lea 的 PPA 安裝 redis-server</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>sudo add-apt-repository ppa:chris-lea/redis-server
+</span><span class='line'><span class="nv">$ </span>sudo apt-get update
+</span><span class='line'><span class="nv">$ </span>sudo apt-get install redis-server
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>redis 有提供 CLI 指令進行操作，我們可以利用該指令實驗是否安裝成功</p>
+
+<figure class='code'><figcaption><span>測試 redis-server 是否安裝成功</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>sudo add-apt-repository ppa:chris-lea/redis-server
-</span><span class='line'><span class="nv">$ </span>sudo apt-get update
-</span><span class='line'><span class="nv">$ </span>sudo apt-get install redis-server
-</span><span class='line'><span class="nv">$ </span>redis-cli
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>redis-cli
 </span><span class='line'>redis 127.0.0.1:6379&gt; INFO
 </span><span class='line'>redis_version:2.4.15
 </span><span class='line'>...
@@ -137,7 +145,7 @@
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/service/'>Service</a>, <a class='category' href='/blog/categories/redis/'>redis</a>
+    <a class='category' href='/blog/categories/redis/'>redis</a>, <a class='category' href='/blog/categories/service/'>service</a>
   
 </span>
 
@@ -160,6 +168,8 @@
     <p class="meta">
       
       
+        <a class="basic-alignment right" href="/blog/2012/07/10/article-to-be-deleted/" title="Next Post: Article to be deleted">Article to be deleted &raquo;</a>
+      
     </p>
   </footer>
 </article>
@@ -173,7 +183,11 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2012/07/10/install-redis-in-ubuntu-linux/">Install redis in Ubuntu Linux</a>
+        <a href="/blog/2012/07/10/article-to-be-deleted/">Article to be deleted</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/10/install-redis-in-ubuntu-linux/">在 Ubuntu Linux 中安裝 redis-server</a>
       </li>
     
   </ul>
