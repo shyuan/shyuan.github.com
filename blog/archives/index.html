@@ -1,271 +1,178 @@
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>Blog Archive - 袁氏開發物語</title>
-  <meta name="author" content="Sheng-Ho Chris Yuan, 袁昇禾">
+	<meta charset="utf-8">
+	<title>Blog Archives - 袁氏開發物語</title>
+	<meta name="author" content="Sheng-Ho Chris Yuan, 袁昇禾">
 
-  
-  <meta name="description" content="Blog Archive 2012 Install GITLAB git repository management system
-Jul 10 2012 在 Ubuntu Linux 中安裝 zsh 及 oh-my-zsh
-Jul 10 2012 posted in linux, zsh 讓 &hellip;">
-  
+	
+	<meta name="description" content="2012 Install GITLAB git repository management system Jul 10 在 Ubuntu Linux 中安裝 zsh 及 oh-my-zsh Jul 10 linux, zsh 讓 sudo 不用輸入密碼 Jul 10 linux 在 Ubuntu &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
-  <link rel="canonical" href="http://shyuan.github.com/blog/archives/">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <link href="/atom.xml" rel="alternate" title="袁氏開發物語" type="application/atom+xml">
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-
-  
-
+	<link href="/atom.xml" rel="alternate" title="袁氏開發物語" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
 </head>
 
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">袁氏開發物語</a></h1>
-  
-    <h2>收集整理技術相關資料</h2>
-  
-</hgroup>
+<body>
+	<header id="header" class="inner"><h1><a href="/">袁氏開發物語</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="http://google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:shyuan.github.com">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		<a class="google" href="https://plus.google.com/117508001401278073171?rel=author" title="Google+">Google+</a>
+		
+		
+		<a class="twitter" href="http://twitter.com/honglong0420" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/shyuan" title="GitHub">GitHub</a>
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+	<form class="search" action="http://google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:shyuan.github.com">
+	</form>
+</nav>
 
 </header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:shyuan.github.com" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
-
-</nav>
-  <div id="main">
-    <div id="content">
-      <div>
-<article role="article">
-  
-  <header>
-    <h1 class="entry-title">Blog Archive</h1>
-    
-  </header>
-  
-  <div id="blog-archives">
-
-
-
-  
-  <h2>2012</h2>
-
-<article>
-  
-<h1><a href="/blog/2012/07/10/install-gitlab-git-repository-management-system/">Install GITLAB git repository management system</a></h1>
-<time datetime="2012-07-10T21:18:00+08:00" pubdate><span class='month'>Jul</span> <span class='day'>10</span> <span class='year'>2012</span></time>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2012/07/10/install-zsh-and-oh-my-zsh-in-ubuntu-linux/">在 Ubuntu Linux 中安裝 zsh 及 oh-my-zsh</a></h1>
-<time datetime="2012-07-10T21:17:00+08:00" pubdate><span class='month'>Jul</span> <span class='day'>10</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/linux/'>linux</a>, <a class='category' href='/blog/categories/zsh/'>zsh</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2012/07/10/no-need-to-enter-password-sudo/">讓 sudo 不用輸入密碼</a></h1>
-<time datetime="2012-07-10T15:36:00+08:00" pubdate><span class='month'>Jul</span> <span class='day'>10</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/linux/'>linux</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2012/07/10/install-redis-in-ubuntu-linux/">在 Ubuntu Linux 中安裝 redis-server</a></h1>
-<time datetime="2012-07-10T12:38:00+08:00" pubdate><span class='month'>Jul</span> <span class='day'>10</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/redis/'>redis</a>, <a class='category' href='/blog/categories/service/'>service</a></span>
-</footer>
-
-
-</article>
-
+	
+<div id="banner" class="inner">
+	<div class="container">
+		<ul class="feed"></ul>
+	</div>
+	<small><a href="http://twitter.com/honglong0420">honglong0420</a> @ <a href="http://twitter.com">Twitter</a></small>
+	<div class="loading">Loading...</div>
 </div>
+<script src="/javascripts/twitter.js"></script>
+<script type="text/javascript">
+	(function($){
+		$('#banner').getTwitterFeed('honglong0420', 4, false);
+	})(jQuery);
+</script>
 
-  
+	<div id="content" class="inner">
+	
+
+
+	
+	
+	<section class="archives"><h1 class="year">2012</h1>
+
+<article>
+	<h1 class="title"><a href="/blog/2012/07/10/install-gitlab-git-repository-management-system/">Install GITLAB git repository management system</a></h1>
+	<div class="meta">
+		<span class="date">Jul 10</span>
+		<span class="tags">
+
+</span>
+	    
+	</div>
 </article>
 
+	
+
+
+<article>
+	<h1 class="title"><a href="/blog/2012/07/10/install-zsh-and-oh-my-zsh-in-ubuntu-linux/">在 Ubuntu Linux 中安裝 zsh 及 oh-my-zsh</a></h1>
+	<div class="meta">
+		<span class="date">Jul 10</span>
+		<span class="tags">
+
+
+	<a class='category' href='/blog/categories/linux/'>linux</a>, <a class='category' href='/blog/categories/zsh/'>zsh</a>
+
+
+</span>
+	    
+	</div>
+</article>
+
+	
+
+
+<article>
+	<h1 class="title"><a href="/blog/2012/07/10/no-need-to-enter-password-sudo/">讓 sudo 不用輸入密碼</a></h1>
+	<div class="meta">
+		<span class="date">Jul 10</span>
+		<span class="tags">
+
+
+	<a class='category' href='/blog/categories/linux/'>linux</a>
+
+
+</span>
+	    
+	</div>
+</article>
+
+	
+
+
+<article>
+	<h1 class="title"><a href="/blog/2012/07/10/install-redis-in-ubuntu-linux/">在 Ubuntu Linux 中安裝 redis-server</a></h1>
+	<div class="meta">
+		<span class="date">Jul 10</span>
+		<span class="tags">
+
+
+	<a class='category' href='/blog/categories/redis/'>redis</a>, <a class='category' href='/blog/categories/service/'>service</a>
+
+
+</span>
+	    
+	</div>
+</article>
 </div>
+	<footer id="footer" class="inner">Copyright &copy; 2012
 
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2012/07/10/install-gitlab-git-repository-management-system/">Install GITLAB git repository management system</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/07/10/install-zsh-and-oh-my-zsh-in-ubuntu-linux/">在 Ubuntu Linux 中安裝 zsh 及 oh-my-zsh</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/07/10/no-need-to-enter-password-sudo/">讓 sudo 不用輸入密碼</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/07/10/install-redis-in-ubuntu-linux/">在 Ubuntu Linux 中安裝 redis-server</a>
-      </li>
-    
-  </ul>
-</section>
-
-<section>
-  <h1>GitHub Repos</h1>
-  <ul id="gh_repos">
-    <li class="loading">Status updating...</li>
-  </ul>
-  
-  <a href="https://github.com/shyuan">@shyuan</a> on GitHub
-  
-  <script type="text/javascript">
-    $.domReady(function(){
-        if (!window.jXHR){
-            var jxhr = document.createElement('script');
-            jxhr.type = 'text/javascript';
-            jxhr.src = '/javascripts/libs/jXHR.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(jxhr, s);
-        }
-
-        github.showRepos({
-            user: 'shyuan',
-            count: 0,
-            skip_forks: true,
-            target: '#gh_repos'
-        });
-    });
-  </script>
-  <script src="/javascripts/github.js" type="text/javascript"> </script>
-</section>
-
-
-<section>
-  <h1>Latest Tweets</h1>
-  <ul id="tweets">
-    <li class="loading">Status updating...</li>
-  </ul>
-  <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("honglong0420", 4, false);
-    });
-  </script>
-  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
-  
-    <a href="http://twitter.com/honglong0420" class="twitter-follow-button" data-show-count="false">Follow @honglong0420</a>
-  
-</section>
-
-
-
-<section class="googleplus">
-  <h1>
-    <a href="https://plus.google.com/117508001401278073171?rel=author">
-      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
-      Google+
-    </a>
-  </h1>
-</section>
-
-
-
-  
-</aside>
-
-
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - Sheng-Ho Chris Yuan, 袁昇禾 -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
+    Sheng-Ho Chris Yuan, 袁昇禾
 
 </footer>
-  
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
 
-
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-
-
-  <script type="text/javascript">
-    (function() {
-      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
-      script.src = 'https://apis.google.com/js/plusone.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
-    })();
-  </script>
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
 
 
 
