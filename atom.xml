@@ -4,7 +4,7 @@
   <title><![CDATA[袁氏開發物語]]></title>
   <link href="http://shyuan.github.com/atom.xml" rel="self"/>
   <link href="http://shyuan.github.com/"/>
-  <updated>2012-07-11T01:24:25+08:00</updated>
+  <updated>2012-07-11T02:07:26+08:00</updated>
   <id>http://shyuan.github.com/</id>
   <author>
     <name><![CDATA[Sheng-Ho Chris Yuan, 袁昇禾]]></name>
@@ -12,68 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[在 Ubuntu Linux 中安裝 zsh 及 oh-my-zsh]]></title>
-    <link href="http://shyuan.github.com/blog/2012/07/10/install-zsh-and-oh-my-zsh-in-ubuntu-linux/"/>
-    <updated>2012-07-10T21:17:00+08:00</updated>
-    <id>http://shyuan.github.com/blog/2012/07/10/install-zsh-and-oh-my-zsh-in-ubuntu-linux</id>
-    <content type="html"><![CDATA[<p>直接用 apt-get 安裝 zsh 套件</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>apt-get install zsh
-</span><span class='line'><span class="nv">$ </span>zsh --verison
-</span><span class='line'>zsh 4.3.17
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>從 GitHub 下載 oh-my-zsh 套件</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>如果本來沒有安裝 zsh 可以直接使用 oh-my-zsh 的範例 zshrc</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>看看有什麼 Theme 可以用</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>ls ~/.oh-my-zsh/themes
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>編輯 ~/.zshrc 更換 zsh 的 theme 我自己喜歡用 candy</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">ZSH_THEME</span><span class="o">=</span><span class="s2">&quot;candy&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>看看有什麼 Plugin 可以用</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>ls ~/.oh-my-zsh/plugins
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>編輯 ~/.zshrc 啟用 Plugin</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">plugins</span><span class="o">=(</span>git git-flow debian grails rvm <span class="nb">history</span>-substring-search github gradle svn node npm zsh-syntax-highlighting sublime<span class="o">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[讓 sudo 不用輸入密碼]]></title>

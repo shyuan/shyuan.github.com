@@ -2,24 +2,18 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://shyuan.github.com/blog/2012/07/10/install-redis-in-ubuntu-linux/</loc>
-        <lastmod>2012-07-10T21:05:06+08:00</lastmod>
+        <lastmod>2012-07-11T01:53:18+08:00</lastmod>
     </url>
     <url>
         <loc>http://shyuan.github.com/blog/2012/07/10/no-need-to-enter-password-sudo/</loc>
-        <lastmod>2012-07-10T21:05:06+08:00</lastmod>
-    </url>
-    <url>
-        <loc>
-            http://shyuan.github.com/blog/2012/07/10/install-zsh-and-oh-my-zsh-in-ubuntu-linux/
-        </loc>
-        <lastmod>2012-07-11T01:21:07+08:00</lastmod>
+        <lastmod>2012-07-11T01:53:18+08:00</lastmod>
     </url>
     <url>
         <loc>http://shyuan.github.com/</loc>
-        <lastmod>2012-07-11T01:21:07+08:00</lastmod>
+        <lastmod>2012-07-11T01:53:18+08:00</lastmod>
     </url>
     <url>
         <loc>http://shyuan.github.com/blog/archives/</loc>
-        <lastmod>2012-07-11T01:21:07+08:00</lastmod>
+        <lastmod>2012-07-11T01:53:18+08:00</lastmod>
     </url>
 </urlset>
