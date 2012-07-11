@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ruby | 袁氏開發物語]]></title>
+  <link href="http://shyuan.github.com/blog/categories/ruby/atom.xml" rel="self"/>
+  <link href="http://shyuan.github.com/"/>
+  <updated>2012-07-11T19:03:25+08:00</updated>
+  <id>http://shyuan.github.com/</id>
+  <author>
+    <name><![CDATA[Sheng-Ho Chris Yuan, 袁昇禾]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[在 Ubuntu Linux 中安裝 RVM(Ruby Version Manager)]]></title>
+    <link href="http://shyuan.github.com/blog/2012/07/10/install-rvm-in-ubuntu-linux/"/>
+    <updated>2012-07-10T21:17:00+08:00</updated>
+    <id>http://shyuan.github.com/blog/2012/07/10/install-rvm-in-ubuntu-linux</id>
+    <content type="html"><![CDATA[<p>安裝必要套件
+<code>sh
+$ sudo apt-get install bison build-essential libssl-dev
+</code></p>
+
+<p>安裝 RVM 環境
+<code>sh
+$ curl -L https://get.rvm.io | bash -s stable
+</code></p>
+
+<p>修改 zshrc 讓 zsh 操作 rvm 更方便
+<code>sh
+[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; . "$HOME/.rvm/scripts/rvm" # Load RVM function
+plugins=(... rvm ...)
+</code>
+重新開啟 Terminal 讓 zshrc 生效</p>
+
+<p>讓 rvm 列出可以安裝的 ruby 環境
+<code>sh
+$ rvm list known
+</code></p>
+
+<p>安裝 Ruby 1.9.3
+<code>sh
+$ rvm install 1.9.3
+$ ruby --version
+ruby 1.9.3p194 (2012-04-20 revision 35410) [i686-linux]
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>

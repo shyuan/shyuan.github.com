@@ -207,6 +207,82 @@ $ git clone https://github.com/robbyrussell/ &hellip;">
 
 
     <article class="post">
+	<h1 class="title"><a href="/blog/2012/07/10/install-rvm-in-ubuntu-linux/">在 Ubuntu Linux 中安裝 RVM(Ruby Version Manager)</a></h1>
+	<div class="entry-content">
+		<p>安裝必要套件</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>sudo apt-get install bison build-essential libssl-dev
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>安裝 RVM 環境</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>curl -L https://get.rvm.io | bash -s stable
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>修改 zshrc 讓 zsh 操作 rvm 更方便</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="o">[[</span> -s <span class="s2">&quot;$HOME/.rvm/scripts/rvm&quot;</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> . <span class="s2">&quot;$HOME/.rvm/scripts/rvm&quot;</span> <span class="c"># Load RVM function</span>
+</span><span class='line'><span class="nv">plugins</span><span class="o">=(</span>... rvm ...<span class="o">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>重新開啟 Terminal 讓 zshrc 生效</p>
+
+<p>讓 rvm 列出可以安裝的 ruby 環境</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>rvm list known
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>安裝 Ruby 1.9.3</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>rvm install 1.9.3
+</span><span class='line'><span class="nv">$ </span>ruby --version
+</span><span class='line'>ruby 1.9.3p194 <span class="o">(</span>2012-04-20 revision 35410<span class="o">)</span> <span class="o">[</span>i686-linux<span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-10T21:17:00+08:00" pubdate data-updated="true">Jul 10<span>th</span>, 2012</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/ruby/'>ruby</a>
+
+
+</div>
+	
+</div></article>
+
+
+    <article class="post">
 	<h1 class="title"><a href="/blog/2012/07/10/no-need-to-enter-password-sudo/">讓 Sudo 不用輸入密碼</a></h1>
 	<div class="entry-content">
 		<p>對於 sudo 常常問密碼感到麻煩嗎？改一下 /etc/sudoers 設定檔吧！</p>
