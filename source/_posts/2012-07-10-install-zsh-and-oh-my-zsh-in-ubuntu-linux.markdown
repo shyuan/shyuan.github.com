@@ -43,4 +43,17 @@ $ ls ~/.oh-my-zsh/plugins
 plugins=(git git-flow debian grails rvm history-substring-search github gradle svn node npm zsh-syntax-highlighting sublime)
 ```
 
+下載 zsh-syntax-highlighting plugin
+``` sh
+$ cd ~/.oh-my-zsh/custom/plugins
+$ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+```
 
+新增自訂 zsh 設定，我會把 alias 和 PATH 的設定放在這邊
+```
+$ cat ~/.oh-my-zsh/custom/xxx.zsh
+alias df='df -h'
+alias h='htop'
+
+PATH=$PATH:/opt/app/bin/
+```
