@@ -4,7 +4,7 @@
   <title><![CDATA[Category: linux | 袁氏開發物語]]></title>
   <link href="http://shyuan.github.com/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://shyuan.github.com/"/>
-  <updated>2012-07-11T03:14:35+08:00</updated>
+  <updated>2012-07-11T18:34:52+08:00</updated>
   <id>http://shyuan.github.com/</id>
   <author>
     <name><![CDATA[Sheng-Ho Chris Yuan, 袁昇禾]]></name>
@@ -54,6 +54,21 @@ $ ls ~/.oh-my-zsh/plugins
 <code>sh
 plugins=(git git-flow debian grails rvm history-substring-search github gradle svn node npm zsh-syntax-highlighting sublime)
 </code></p>
+
+<p>下載 zsh-syntax-highlighting plugin
+<code>sh
+$ cd ~/.oh-my-zsh/custom/plugins
+$ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+</code></p>
+
+<p>新增自訂 zsh 設定，我會把 alias 和 PATH 的設定放在這邊
+```
+$ cat ~/.oh-my-zsh/custom/xxx.zsh
+alias df='df -h'
+alias h='htop'</p>
+
+<p>PATH=$PATH:/opt/app/bin/
+```</p>
 ]]></content>
   </entry>
   

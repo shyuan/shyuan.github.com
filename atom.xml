@@ -4,7 +4,7 @@
   <title><![CDATA[袁氏開發物語]]></title>
   <link href="http://shyuan.github.com/atom.xml" rel="self"/>
   <link href="http://shyuan.github.com/"/>
-  <updated>2012-07-11T03:14:35+08:00</updated>
+  <updated>2012-07-11T18:34:52+08:00</updated>
   <id>http://shyuan.github.com/</id>
   <author>
     <name><![CDATA[Sheng-Ho Chris Yuan, 袁昇禾]]></name>
@@ -71,6 +71,28 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
+<p>下載 zsh-syntax-highlighting plugin</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span><span class="nb">cd</span> ~/.oh-my-zsh/custom/plugins
+</span><span class='line'><span class="nv">$ </span>git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>新增自訂 zsh 設定，我會把 alias 和 PATH 的設定放在這邊</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>cat ~/.oh-my-zsh/custom/xxx.zsh
+</span><span class='line'><span class="nb">alias </span><span class="nv">df</span><span class="o">=</span><span class="s1">&#39;df -h&#39;</span>
+</span><span class='line'><span class="nb">alias </span><span class="nv">h</span><span class="o">=</span><span class="s1">&#39;htop&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/opt/app/bin/
+</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>
