@@ -4,7 +4,7 @@
   <title><![CDATA[袁氏開發物語]]></title>
   <link href="http://shyuan.github.com/atom.xml" rel="self"/>
   <link href="http://shyuan.github.com/"/>
-  <updated>2012-07-11T18:34:52+08:00</updated>
+  <updated>2012-07-11T19:03:25+08:00</updated>
   <id>http://shyuan.github.com/</id>
   <author>
     <name><![CDATA[Sheng-Ho Chris Yuan, 袁昇禾]]></name>
@@ -92,6 +92,56 @@
 </span><span class='line'><span class="nb">alias </span><span class="nv">h</span><span class="o">=</span><span class="s1">&#39;htop&#39;</span>
 </span><span class='line'>
 </span><span class='line'><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/opt/app/bin/
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[在 Ubuntu Linux 中安裝 RVM(Ruby Version Manager)]]></title>
+    <link href="http://shyuan.github.com/blog/2012/07/10/install-rvm-in-ubuntu-linux/"/>
+    <updated>2012-07-10T21:17:00+08:00</updated>
+    <id>http://shyuan.github.com/blog/2012/07/10/install-rvm-in-ubuntu-linux</id>
+    <content type="html"><![CDATA[<p>安裝必要套件</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>sudo apt-get install bison build-essential libssl-dev
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>安裝 RVM 環境</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>curl -L https://get.rvm.io | bash -s stable
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>修改 zshrc 讓 zsh 操作 rvm 更方便</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="o">[[</span> -s <span class="s2">&quot;$HOME/.rvm/scripts/rvm&quot;</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> . <span class="s2">&quot;$HOME/.rvm/scripts/rvm&quot;</span> <span class="c"># Load RVM function</span>
+</span><span class='line'><span class="nv">plugins</span><span class="o">=(</span>... rvm ...<span class="o">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>重新開啟 Terminal 讓 zshrc 生效</p>
+
+<p>讓 rvm 列出可以安裝的 ruby 環境</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>rvm list known
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>安裝 Ruby 1.9.3</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>rvm install 1.9.3
+</span><span class='line'><span class="nv">$ </span>ruby --version
+</span><span class='line'>ruby 1.9.3p194 <span class="o">(</span>2012-04-20 revision 35410<span class="o">)</span> <span class="o">[</span>i686-linux<span class="o">]</span>
 </span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
