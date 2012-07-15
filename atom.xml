@@ -4,7 +4,7 @@
   <title><![CDATA[袁氏開發物語]]></title>
   <link href="http://shyuan.github.com/atom.xml" rel="self"/>
   <link href="http://shyuan.github.com/"/>
-  <updated>2012-07-15T15:59:24+08:00</updated>
+  <updated>2012-07-15T16:06:54+08:00</updated>
   <id>http://shyuan.github.com/</id>
   <author>
     <name><![CDATA[Sheng-Ho Chris Yuan, 袁昇禾]]></name>
@@ -148,7 +148,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Install Node.js environment]]></title>
+    <title type="html"><![CDATA[透過 NVM 使用 Node.js]]></title>
     <link href="http://shyuan.github.com/blog/2012/07/10/install-node-dot-js-environment/"/>
     <updated>2012-07-10T21:06:00+08:00</updated>
     <id>http://shyuan.github.com/blog/2012/07/10/install-node-dot-js-environment</id>
