@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: javascript | 袁氏開發物語]]></title>
+  <link href="http://shyuan.github.com/blog/categories/javascript/atom.xml" rel="self"/>
+  <link href="http://shyuan.github.com/"/>
+  <updated>2012-07-15T15:59:24+08:00</updated>
+  <id>http://shyuan.github.com/</id>
+  <author>
+    <name><![CDATA[Sheng-Ho Chris Yuan, 袁昇禾]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Install Node.js environment]]></title>
+    <link href="http://shyuan.github.com/blog/2012/07/10/install-node-dot-js-environment/"/>
+    <updated>2012-07-10T21:06:00+08:00</updated>
+    <id>http://shyuan.github.com/blog/2012/07/10/install-node-dot-js-environment</id>
+    <content type="html"><![CDATA[<p>第一次聽到 Node.js 這套 Server Side 的 Javascript 開發環境是在 2011 年的三四月份，利用 Chrome 瀏覽器高效能的 V8 Javascript engine，作為運作 Server Side 的核心。
+如果你是熟悉 Java 的開發人員，可以將 Node.js 視為一個以 C++ 開發出來的 Javascript 的 Virtual Machine。
+Node.js 能擁有極高效能，除了得力於 V8 Engine 之外，Javascript 本身的 Event Base 的開發模式相較於傳統 Server Side 的 Multi-Threading 能更快速地回應 Client 的要求。</p>
+
+<p>如果作業系統是 M$ Windows/Apple Mac，Node.js 的官網有提供安裝套件可以直接安裝。</p>
+
+<p>但因為 Node.js 在目前還是處於快速發展的階段，平均一至兩週會有小版本更新，每兩至三月會有一個主版本 Release ，寫這篇文章的時候，最新的版本是 0.8.2。</p>
+
+<p>就因為版本快速的變化，常常會發生在舊版本正常運作的套件或程式，在升到新版後卻無法正常運作，所以才有了 NVM (Node Version Manager) 來管理 Node.js 的版本。</p>
+
+<p>有了 NVM ，便可以同時安裝多個不同版本的 Node.js ，並且可以很快速的在不同版本之間進行切換。</p>
+
+<p>下面就來介紹要如何安裝 Node.js</p>
+
+<p>直接用 git 下載安裝
+<code>sh
+$ git clone git://github.com/creationix/nvm.git ~/nvm
+</code></p>
+
+<p>如果要直接啟用 nvm 可以直接 source 剛剛下載回來的 nvm.sh
+<code>sh
+$ source ~/nvm/nvm.sh
+</code></p>
+
+<p>讓每次登入時直接載入 NVM ，把以下的判斷加入 Shell 的 RC
+<code>sh
+[[ -s $HOME/nvm ]] &amp;&amp; source $HOME/nvm/nvm.sh
+</code></p>
+
+<p>重新啟動一個 Terminal 驗證 NVM 是否能被自動載入
+```
+$ nvm help</p>
+
+<p>Node Version Manager</p>
+
+<p>Usage:</p>
+
+<pre><code> nvm help                    Show this message
+ nvm install &lt;version&gt;       Download and install a &lt;version&gt;
+ nvm uninstall &lt;version&gt;     Uninstall a version
+ nvm use &lt;version&gt;           Modify PATH to use &lt;version&gt;
+ nvm run &lt;version&gt; [&lt;args&gt;]  Run &lt;version&gt; with &lt;args&gt; as arguments
+ nvm ls                      List installed versions
+ nvm ls &lt;version&gt;            List versions matching a given description
+ nvm deactivate              Undo effects of NVM on current shell
+ nvm alias [&lt;pattern&gt;]       Show all aliases beginning with &lt;pattern&gt;
+ nvm alias &lt;name&gt; &lt;version&gt;  Set an alias named &lt;name&gt; pointing to &lt;version&gt;
+ nvm unalias &lt;name&gt;          Deletes the alias named &lt;name&gt;
+ nvm copy-packages &lt;version&gt; Install global NPM packages contained in &lt;version&gt; to current version
+</code></pre>
+
+<p>Example:</p>
+
+<pre><code>nvm install v0.4.12         Install a specific version number
+nvm use 0.2                 Use the latest available 0.2.x release
+nvm run 0.4.12 myApp.js     Run myApp.js using node v0.4.12
+nvm alias default 0.4       Auto use the latest installed v0.4.x version
+</code></pre>
+
+<p>```</p>
+
+<p>在 Ubuntu 中必須要先安裝 build-essential 及 libssl-dev 這兩個套件
+<code>sh
+$ apt-get install build-essential libssl-dev
+</code></p>
+
+<p>安裝 Node.js 0.8.2
+<code>sh
+$ nvm install v0.8.2
+...
+$ nvm list
+v0.8.2
+current:    v0.8.2
+</code>
+只要 nvm list 後有看到 current: v0.8.2 就表示安裝成功了</p>
+
+<p>在 zsh 中如果沒有設定 default alias 可能會有執行的問題
+<code>
+$ node alias default 0.8.2
+$ nvm list
+v0.8.2
+current:    v0.8.2
+default -&gt; 0.8.2 (-&gt; v0.8.2)
+</code></p>
+
+<p>安裝其他版本的 Node.js ，以 0.6.19 為例
+``` sh
+$ nvm install v0.6.19
+...</p>
+
+<p>$ nvm list
+v0.6.19 v0.8.2
+current:    v0.8.2
+default -> 0.8.2 (-> v0.8.2)</p>
+
+<p>$ node --version
+v0.8.2</p>
+
+<p>$ nvm use 0.6.19</p>
+
+<p>$ nvm list
+v0.6.19 v0.8.2
+current:    v0.6.19
+default -> 0.8.2 (-> v0.8.2)</p>
+
+<p>$ node --version
+v0.6.19
+```</p>
+]]></content>
+  </entry>
+  
+</feed>
