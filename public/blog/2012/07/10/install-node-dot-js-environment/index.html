@@ -3,17 +3,12 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>袁氏開發物語</title>
+	<title>透過 NVM 使用 Node.js - 袁氏開發物語</title>
 	<meta name="author" content="Sheng-Ho Chris Yuan, 袁昇禾">
 
 	
-	<meta name="description" content="直接用 apt-get 安裝 zsh 套件 1
-2
-3
-$ apt-get install zsh
-$ zsh --verison
-zsh 4.3.17 從 GitHub 下載 oh-my-zsh 套件 1
-$ git clone https://github.com/robbyrussell/ &hellip;">
+	<meta name="description" content="第一次聽到 Node.js 這套 Server Side 的 Javascript 開發環境是在 2011 年的三四月份，利用 Chrome 瀏覽器高效能的 V8 Javascript engine，作為運作 Server Side 的核心。
+如果你是熟悉 Java 的開發人員，可以將 Node. &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -93,199 +88,9 @@ $ git clone https://github.com/robbyrussell/ &hellip;">
 	})(jQuery);
 </script>
 
-	<div id="content" class="inner">
-
-
-    <article class="post">
-	<h1 class="title"><a href="/blog/2012/07/10/install-zsh-and-oh-my-zsh-in-ubuntu-linux/">在 Ubuntu Linux 中安裝 Zsh 及 Oh-my-zsh</a></h1>
-	<div class="entry-content">
-		<p>直接用 apt-get 安裝 zsh 套件</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>apt-get install zsh
-</span><span class='line'><span class="nv">$ </span>zsh --verison
-</span><span class='line'>zsh 4.3.17
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>從 GitHub 下載 oh-my-zsh 套件</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>如果本來沒有安裝 zsh 可以直接使用 oh-my-zsh 的範例 zshrc</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>看看有什麼 Theme 可以用</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>ls ~/.oh-my-zsh/themes
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>編輯 ~/.zshrc 更換 zsh 的 theme 我自己喜歡用 candy</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">ZSH_THEME</span><span class="o">=</span><span class="s2">&quot;candy&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>看看有什麼 Plugin 可以用</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>ls ~/.oh-my-zsh/plugins
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>編輯 ~/.zshrc 啟用 Plugin</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">plugins</span><span class="o">=(</span>git git-flow debian grails rvm <span class="nb">history</span>-substring-search github gradle svn node npm zsh-syntax-highlighting sublime<span class="o">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>下載 zsh-syntax-highlighting plugin</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span><span class="nb">cd</span> ~/.oh-my-zsh/custom/plugins
-</span><span class='line'><span class="nv">$ </span>git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>新增自訂 zsh 設定，我會把 alias 和 PATH 的設定放在這邊</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>cat ~/.oh-my-zsh/custom/xxx.zsh
-</span><span class='line'><span class="nb">alias </span><span class="nv">df</span><span class="o">=</span><span class="s1">&#39;df -h&#39;</span>
-</span><span class='line'><span class="nb">alias </span><span class="nv">h</span><span class="o">=</span><span class="s1">&#39;htop&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/opt/app/bin/
-</span></code></pre></td></tr></table></div></figure>
-
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-10T21:17:00+08:00" pubdate data-updated="true">Jul 10<span>th</span>, 2012</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/linux/'>linux</a>, <a class='category' href='/blog/categories/zsh/'>zsh</a>
-
-
-</div>
-	
-</div></article>
-
-
-    <article class="post">
-	<h1 class="title"><a href="/blog/2012/07/10/install-rvm-in-ubuntu-linux/">在 Ubuntu Linux 中安裝 RVM(Ruby Version Manager)</a></h1>
-	<div class="entry-content">
-		<p>安裝必要套件</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>sudo apt-get install bison build-essential libssl-dev
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>安裝 RVM 環境</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>curl -L https://get.rvm.io | bash -s stable
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>修改 zshrc 讓 zsh 操作 rvm 更方便</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="o">[[</span> -s <span class="s2">&quot;$HOME/.rvm/scripts/rvm&quot;</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> . <span class="s2">&quot;$HOME/.rvm/scripts/rvm&quot;</span> <span class="c"># Load RVM function</span>
-</span><span class='line'><span class="nv">plugins</span><span class="o">=(</span>... rvm ...<span class="o">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>重新開啟 Terminal 讓 zshrc 生效</p>
-
-<p>讓 rvm 列出可以安裝的 ruby 環境</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>rvm list known
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>安裝 Ruby 1.9.3</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>rvm install 1.9.3
-</span><span class='line'><span class="nv">$ </span>ruby --version
-</span><span class='line'>ruby 1.9.3p194 <span class="o">(</span>2012-04-20 revision 35410<span class="o">)</span> <span class="o">[</span>i686-linux<span class="o">]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-10T21:17:00+08:00" pubdate data-updated="true">Jul 10<span>th</span>, 2012</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/ruby/'>ruby</a>
-
-
-</div>
-	
-</div></article>
-
-
-    <article class="post">
-	<h1 class="title"><a href="/blog/2012/07/10/install-node-dot-js-environment/">透過 NVM 使用 Node.js</a></h1>
-	<div class="entry-content">
-		<p>第一次聽到 Node.js 這套 Server Side 的 Javascript 開發環境是在 2011 年的三四月份，利用 Chrome 瀏覽器高效能的 V8 Javascript engine，作為運作 Server Side 的核心。
+	<div id="content" class="inner"><article class="post">
+	<h1 class="title">透過 NVM 使用 Node.js</h1>
+	<div class="entry-content"><p>第一次聽到 Node.js 這套 Server Side 的 Javascript 開發環境是在 2011 年的三四月份，利用 Chrome 瀏覽器高效能的 V8 Javascript engine，作為運作 Server Side 的核心。
 如果你是熟悉 Java 的開發人員，可以將 Node.js 視為一個以 C++ 開發出來的 Javascript 的 Virtual Machine。
 Node.js 能擁有極高效能，除了得力於 V8 Engine 之外，Javascript 本身的 Event Base 的開發模式相較於傳統 Server Side 的 Multi-Threading 能更快速地回應 Client 的要求。</p>
 
@@ -454,10 +259,7 @@ Node.js 能擁有極高效能，除了得力於 V8 Engine 之外，Javascript �
 </span><span class='line'>v0.6.19
 </span></code></pre></td></tr></table></div></figure>
 
-
-		
-		
-	</div>
+</div>
 
 
 <div class="meta">
@@ -483,118 +285,23 @@ Node.js 能擁有極高效能，除了得力於 V8 Engine 之外，Javascript �
 </div>
 	
 </div></article>
-
-
-    <article class="post">
-	<h1 class="title"><a href="/blog/2012/07/10/no-need-to-enter-password-sudo/">讓 Sudo 不用輸入密碼</a></h1>
-	<div class="entry-content">
-		<p>對於 sudo 常常問密碼感到麻煩嗎？改一下 /etc/sudoers 設定檔吧！</p>
-
-<figure class='code'><figcaption><span>把你的帳號加到 /etc/group 中</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo:x:27:myAccount</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span>把 NOPASSWD: 加到 /etc/sudoers 的 sudo group 段落</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># Allow members of group sudo to execute any command
-</span><span class='line'>%sudo   ALL=(ALL:ALL) NOPASSWD: ALL</span></code></pre></td></tr></table></div></figure>
-
-
-		
-		
+<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+	
+	<a class="addthis_counter addthis_pill_style"></a>
 	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-10T15:36:00+08:00" pubdate data-updated="true">Jul 10<span>th</span>, 2012</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/linux/'>linux</a>
-
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
 
 </div>
-	
-</div></article>
-
-
-    <article class="post">
-	<h1 class="title"><a href="/blog/2012/07/10/install-redis-in-ubuntu-linux/">在 Ubuntu Linux 中安裝 Redis-server</a></h1>
-	<div class="entry-content">
-		<p>由於在 Ubuntu 中預設套件庫中的 redis-server 版本過於老舊，所以我們透過非官方的 PPA 套件庫來安裝。</p>
-
-<figure class='code'><figcaption><span>從 Chris Lea 的 PPA 安裝 redis-server</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>sudo add-apt-repository ppa:chris-lea/redis-server
-</span><span class='line'><span class="nv">$ </span>sudo apt-get update
-</span><span class='line'><span class="nv">$ </span>sudo apt-get install redis-server
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>redis 有提供 CLI 指令進行操作，我們可以利用該指令實驗是否安裝成功</p>
-
-<figure class='code'><figcaption><span>測試 redis-server 是否安裝成功</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>redis-cli
-</span><span class='line'>redis 127.0.0.1:6379&gt; INFO
-</span><span class='line'>redis_version:2.4.15
-</span><span class='line'>...
-</span><span class='line'>...
-</span></code></pre></td></tr></table></div></figure>
-
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-10T12:38:00+08:00" pubdate data-updated="true">Jul 10<span>th</span>, 2012</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/redis/'>redis</a>, <a class='category' href='/blog/categories/service/'>service</a>
-
-
-</div>
-	
-</div></article>
-
-<nav id="pagenavi">
-    
-    
-    <div class="center"><a href="/blog/archives">Blog Archives</a></div>
-</nav></div>
 	<footer id="footer" class="inner">Copyright &copy; 2012
 
     Sheng-Ho Chris Yuan, 袁昇禾
