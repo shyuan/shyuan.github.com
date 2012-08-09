@@ -6,8 +6,7 @@ comments: true
 categories: 
 ---
 
-Vincent Driessen 建立了一個還不錯的 Git 分支管理的工作模式 git-flow
-[A successful Git branching model]: http://nvie.com/posts/a-successful-git-branching-model/
+git-flow 是由 Vincent Driessen 這位老兄建立的 Git 分支管理的工作模式，詳細介紹可參考 [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)，現在就來看看如何把 git-flow 的開發模式帶進 GitHub 中吧。
 
 ``` sh 在 Ubuntu 中安裝 git-flow
 $ apt-get install git-flow
