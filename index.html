@@ -7,13 +7,10 @@
 	<meta name="author" content="Sheng-Ho Chris Yuan, 袁昇禾">
 
 	
-	<meta name="description" content="直接用 apt-get 安裝 zsh 套件 1
+	<meta name="description" content="Vincent Driessen 建立了一個還不錯的 Git 分支管理的工作模式 git-flow 在 Ubuntu 中安裝 git-flow1
+$ apt-get install git-flow 初始化一個新的 Repository 並將其命名為 fakerepo1
 2
-3
-$ apt-get install zsh
-$ zsh --verison
-zsh 4.3.17 從 GitHub 下載 oh-my-zsh 套件 1
-$ git clone https://github.com/robbyrussell/ &hellip;">
+$ git init &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -94,6 +91,190 @@ $ git clone https://github.com/robbyrussell/ &hellip;">
 </script>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h1 class="title"><a href="/blog/2012/08/09/using-git-flow-on-github/">在 GitHub 上使用 Git-flow</a></h1>
+	<div class="entry-content">
+		<p>Vincent Driessen 建立了一個還不錯的 Git 分支管理的工作模式 git-flow</p>
+
+<figure class='code'><figcaption><span>在 Ubuntu 中安裝 git-flow</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>apt-get install git-flow
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>初始化一個新的 Repository 並將其命名為 fakerepo</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>git init fakerepo
+</span><span class='line'><span class="nv">$ </span><span class="nb">cd </span>fakerepo
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>在 Repository 中初始化 git-flow，git-flow 會問你要不要換 Branch 的名稱，這邊都 follow 預設名稱，一直按 Enter 就行了</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>git flow init
+</span><span class='line'>No branches exist yet. Base branches must be created now.
+</span><span class='line'>Branch name <span class="k">for </span>production releases: <span class="o">[</span>master<span class="o">]</span>
+</span><span class='line'>Branch name <span class="k">for</span> <span class="s2">&quot;next release&quot;</span> development: <span class="o">[</span>develop<span class="o">]</span>
+</span><span class='line'>
+</span><span class='line'>How to name your supporting branch prefixes?
+</span><span class='line'>Feature branches? <span class="o">[</span>feature/<span class="o">]</span>
+</span><span class='line'>Release branches? <span class="o">[</span>release/<span class="o">]</span>
+</span><span class='line'>Hotfix branches? <span class="o">[</span>hotfix/<span class="o">]</span>
+</span><span class='line'>Support branches? <span class="o">[</span>support/<span class="o">]</span>
+</span><span class='line'>Version tag prefix? <span class="o">[]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>檢查 Branch 是否都有被成功建立出來</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>git branch
+</span><span class='line'>* develop
+</span><span class='line'>  master
+</span><span class='line'><span class="nv">$ </span>git config -l | grep gitflow
+</span><span class='line'>gitflow.branch.master<span class="o">=</span>master
+</span><span class='line'>gitflow.branch.develop<span class="o">=</span>develop
+</span><span class='line'>gitflow.prefix.feature<span class="o">=</span>feature/
+</span><span class='line'>gitflow.prefix.release<span class="o">=</span>release/
+</span><span class='line'>gitflow.prefix.hotfix<span class="o">=</span>hotfix/
+</span><span class='line'>gitflow.prefix.support<span class="o">=</span>support/
+</span><span class='line'>gitflow.prefix.versiontag<span class="o">=</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>把剛建好的 Repository 送上 GitHub</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>git remote add origin https://github.com/shyuan/fakerepo.git
+</span><span class='line'><span class="nv">$ </span>git push --set-upstream origin develop
+</span><span class='line'>To https://github.com/shyuan/fakerepo.git
+</span><span class='line'> * <span class="o">[</span>new branch<span class="o">]</span>      develop -&gt; develop
+</span><span class='line'>Branch develop <span class="nb">set </span>up to track remote branch develop from origin.
+</span><span class='line'><span class="nv">$ </span>git push --set-upstream origin master
+</span><span class='line'>To https://github.com/shyuan/fakerepo.git
+</span><span class='line'> * <span class="o">[</span>new branch<span class="o">]</span>      master -&gt; master
+</span><span class='line'>Branch master <span class="nb">set </span>up to track remote branch master from origin.
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>檢查 Branch</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>git branch
+</span><span class='line'>* develop
+</span><span class='line'>  master
+</span><span class='line'><span class="nv">$ </span>git branch -r
+</span><span class='line'>  origin/develop
+</span><span class='line'>  origin/master
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>其他使用者的操作步驟</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>git clone https://github.com/shyuan/fakerepo.git
+</span><span class='line'><span class="nv">$ </span><span class="nb">cd </span>fakerepo
+</span><span class='line'><span class="nv">$ </span>git branch
+</span><span class='line'>* master
+</span><span class='line'><span class="nv">$ </span>git branch -r
+</span><span class='line'>origin/HEAD -&gt; origin/master
+</span><span class='line'>origin/develop
+</span><span class='line'>origin/master
+</span><span class='line'><span class="nv">$ </span>git flow init
+</span><span class='line'>Which branch should be used <span class="k">for </span>bringing forth production releases?
+</span><span class='line'>   - master
+</span><span class='line'>Branch name <span class="k">for </span>production releases: <span class="o">[</span>master<span class="o">]</span>
+</span><span class='line'>Branch name <span class="k">for</span> <span class="s2">&quot;next release&quot;</span> development: <span class="o">[</span>develop<span class="o">]</span>
+</span><span class='line'>
+</span><span class='line'>How to name your supporting branch prefixes?
+</span><span class='line'>Feature branches? <span class="o">[</span>feature/<span class="o">]</span>
+</span><span class='line'>Release branches? <span class="o">[</span>release/<span class="o">]</span>
+</span><span class='line'>Hotfix branches? <span class="o">[</span>hotfix/<span class="o">]</span>
+</span><span class='line'>Support branches? <span class="o">[</span>support/<span class="o">]</span>
+</span><span class='line'>Version tag prefix? <span class="o">[]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-09T19:26:00+08:00" pubdate data-updated="true">Aug 9<span>th</span>, 2012</time></div>
+	<div class="tags">
+
+</div>
+	
+</div></article>
 
 
     <article class="post">
