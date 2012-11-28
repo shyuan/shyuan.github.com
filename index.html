@@ -7,7 +7,12 @@
 	<meta name="author" content="Sheng-Ho Chris Yuan, 袁昇禾">
 
 	
-	<meta name="description" content="git-flow 是由 Vincent Driessen 這位老兄建立的 Git 分支管理的工作模式，詳細介紹可參考 A successful Git branching model，現在就來看看如何把 git-flow 的開發模式帶進 GitHub 中吧。 在 Ubuntu 中安裝 git- &hellip;">
+	<meta name="description" content="加上 Dependent Package 在 package.json 中加入 &#8220;connect-redis&#8221; 修改 app.js 1
+2
+3
+4
+var RedisStore = require('connect-redis')(express);
+var &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -88,6 +93,61 @@
 </script>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h1 class="title"><a href="/blog/2012/11/28/use-redis-as-session-storage-with-express/">在 Express 下使用 Redis 來存 Session</a></h1>
+	<div class="entry-content">
+		<h1>加上 Dependent Package</h1>
+
+<p>在 package.json 中加入 &#8220;connect-redis&#8221;</p>
+
+<h1>修改 app.js</h1>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var RedisStore = require('connect-redis')(express);
+</span><span class='line'>var sessionStore = new RedisStore({ttl: 1800}); // ttl 是 Expire 的秒數
+</span><span class='line'>
+</span><span class='line'>app.use(express.session({ key: 'abcde', secret: 'WoW LoL', store: sessionStore}));</span></code></pre></td></tr></table></div></figure>
+
+
+<p>預設會自動連 localhost 的 Redis</p>
+
+<p>可參考 <a href="https://github.com/shyuan/express-redis-session">express-redis-session</a></p>
+
+<p> <a href="https://github.com/visionmedia/connect-redis">visionmedia/connect-redis</a></p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-28T23:14:00+08:00" pubdate data-updated="true">Nov 28<span>th</span>, 2012</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/node-js/'>node.js</a>, <a class='category' href='/blog/categories/redis/'>redis</a>
+
+
+</div>
+	
+</div></article>
 
 
     <article class="post">
