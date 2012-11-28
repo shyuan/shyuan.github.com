@@ -4,7 +4,7 @@
   <title><![CDATA[Category: node.js | 袁氏開發物語]]></title>
   <link href="http://shyuan.github.com/blog/categories/node-js/atom.xml" rel="self"/>
   <link href="http://shyuan.github.com/"/>
-  <updated>2012-08-09T20:01:12+08:00</updated>
+  <updated>2012-11-28T23:24:28+08:00</updated>
   <id>http://shyuan.github.com/</id>
   <author>
     <name><![CDATA[Sheng-Ho Chris Yuan, 袁昇禾]]></name>
@@ -12,6 +12,32 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[在 Express 下使用 Redis 來存 Session]]></title>
+    <link href="http://shyuan.github.com/blog/2012/11/28/use-redis-as-session-storage-with-express/"/>
+    <updated>2012-11-28T23:14:00+08:00</updated>
+    <id>http://shyuan.github.com/blog/2012/11/28/use-redis-as-session-storage-with-express</id>
+    <content type="html"><![CDATA[<h1>加上 Dependent Package</h1>
+
+<p>在 package.json 中加入 "connect-redis"</p>
+
+<h1>修改 app.js</h1>
+
+<p>```
+var RedisStore = require('connect-redis')(express);
+var sessionStore = new RedisStore({ttl: 1800}); // ttl 是 Expire 的秒數</p>
+
+<p>app.use(express.session({ key: 'abcde', secret: 'WoW LoL', store: sessionStore}));
+```</p>
+
+<p>預設會自動連 localhost 的 Redis</p>
+
+<p>可參考 <a href="https://github.com/shyuan/express-redis-session">express-redis-session</a></p>
+
+<p> <a href="https://github.com/visionmedia/connect-redis">visionmedia/connect-redis</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[透過 NVM 使用 Node.js]]></title>
